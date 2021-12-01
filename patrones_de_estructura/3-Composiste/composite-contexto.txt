@@ -1,0 +1,20 @@
+Patrón de estructura: Composite.
+■ Facilita la creación de jerarquías de objetos donde cada objeto se puede tratar de forma independiente o como un conjunto de objetos anidados a través de la misma interfaz.
+■ Este patrón puede ser utilizado cuando:
+● Se necesitan representaciones jerárquicas de objetos.
+● Los objetos y composiciones de objetos debe ser tratados de manera uniforme.
+Compocisión: Componente (Component, interfaz) <- (Leaf - Component, objeto)
+■ Como otra descripción este patrón se utiliza para componer objetos en estructuras de árbol que representan jerarquías todo-parte. También permite tratar uniformemente a los objetos y a las composiciones y es un buen ejemplo de utilización conjunta de herencia y composición.
+■ Elementos que componen el patrón:
+- Componente abstracto: Declara la interfaz para los objetos en la composición implementando su comportamiento por defecto. Además declara la interfaz para acceder y manipular los componentes hijos.
+- Componente concreto: Define el comportamiento de los objetos elementales de la composición (aquellos que no pueden tener hijos).
+- Composición (Composite): Define el comportamiento de los objetos compuestos de la composición.
+- Cliente: Maneja a los objetos a través del interfaz Componente.
+■ Ventajas:
+- Este patrón permite tratar a los objetos básicos y a los objetos compuestos de manera uniforme, facilitando la introducción de nuevos componentes sin afectar al cliente
+■ Inconvenientes:
+- Para restringir qué componentes concretos pueden ir en una determinada composición es necesario añadir comprobaciones en tiempo de ejecución.
+Seguridad y transparencia:
+- La decisión de dónde situar las operaciones propias de la Compocisión (añadir, eliminar, obtener (getHijo)) es una decisión entre transparencia y seguridad.
+- Transparencia: Si se definen en Componente se maximiza su interfaz haciendo que las hojas y las composiciones puedan ser tratadas de forma genérica (aunque puede dar lugar a comportamientos no deseados cuando se intenta añadir o borrar hijos de una hoja).
+- Seguridad: Si se definen en Compocisión estamos seguros de que las operaciones se llaman sobre la clase correcta, pero será necesario trabajar con variables del tipo Compocisión para utilizar estos métodos.
