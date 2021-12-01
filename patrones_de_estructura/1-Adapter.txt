@@ -1,7 +1,0 @@
-Patrón de estructura: Adapter.
-Este permite trabajar juntas a clases con interfaces diferentes a través de la creación de un objeto común mediante el que pueden comunicarse e interactuar.
-Este patrón puede ser utilizado cuando:
-Una clase no cumple los requisitos de interfaz.
-Condiciones complejas "atan" el comportamiento de los objetos a su estado.
-Las transiciones entre los estados necesitan ser explícitas.
-Compocisión: Cliente (Client, objeto) -> Adaptador (Adapter, interfaz) <- Adaptador concreto (ConcreteAdapter, objeto) -> (Adaptee, objeto)
