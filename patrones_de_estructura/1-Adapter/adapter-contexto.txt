@@ -1,0 +1,19 @@
+Patrón de estructura: Adapter.
+■ Este permite trabajar juntas a clases con interfaces diferentes a través de la creación de un objeto común mediante el que pueden comunicarse e interactuar.
+■ Este patrón puede ser utilizado cuando:
+● Una clase no cumple los requisitos de interfaz.
+● Condiciones complejas "atan" el comportamiento de los objetos a su estado.
+● Las transiciones entre los estados necesitan ser explícitas.
+Compocisión: Cliente (Client, objeto) -> Adaptador (Adapter, interfaz) <- Adaptador concreto (ConcreteAdapter, objeto) -> (Adaptee, objeto)
+- Como otra descripción, tenemos que las interfaces se utilizan para desacoplar las clases clientes de las clases que ofrecían ciertos servicios. De esta forma se hace independiente la clase cliente de la clase servidora, sin embargo se fuerza a que la clase servidora implementara un determinado interfaz.
+- En diversas ocasiones puede no interesar modificar la clase servidora, bien porque no se puede (porque no se dispone del código fuente), o porque no se quiere modificar la clase para un determinado uso concreto y especializado.
+- Para convertir la interfaz de una clase en otra interfaz que es el esperado por el cliente que usa dicha clase se utiliza el patrón adaptador.
+■ Elementos que lo componen:
+- Objetivo (Target): Interfaz que utiliza el cliente.
+- Cliente (Client): Colabora con los objetos usando la interfaz Objetivo.
+- Adaptado (Adaptee): Define una interfaz existente que necesita ser adaptada.
+- Adaptador (Adapter): Adapta la interfaz del adaptado a la interfaz Objetivo.
+■ Esquema herencia múltiple:
+- El objeto adaptador hereda el interfaz de Objetivo al mismo tiempo que hereda de la clase Adaptado el método PeticiónEspecífica
+- En este caso la clase Objetivo sólo puede desarrollarse mediante un interface ya que Java no admite herencia múltiple en clases convencionales.
+Esquema
